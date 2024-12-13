@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des réservations{% endblock %}
+
+{% block body %}
+    <h1>Liste des réservations</h1>
+
+    <ul>
+        {% for reservation in reservations %}
+            <li>
+                {{ reservation.eventName }} - {{ reservation.date|date('d/m/Y H:i') }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
